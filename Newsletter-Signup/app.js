@@ -35,7 +35,7 @@ app.post("/", function (req, res) {
         url: "https://us20.api.mailchimp.com/3.0/lists/42f9bd2b1a",
         method: "POST",
         headers: {
-            "Authorization": "75b07a186ee7961b8feebaf443928681-us20" // * -> api key
+            "Authorization": "*" // * -> id+api's key ex) abcd 67890-us01
         },
         body: jsonData
     };
@@ -48,6 +48,7 @@ app.post("/", function (req, res) {
             res.sendFile(__dirname + "/success.html");
            } else {
             res.sendFile(__dirname + "/failure.html");
+            
             }
         }
     });
